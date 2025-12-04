@@ -1,0 +1,10 @@
+Connect FLIR A50 camera to PoE and router for static ip
+Change wifi network to NETGEAR94
+Use FLIR's IP Config (you'll need to download this off their website) to connect to the FLIR
+Click the link and it should open a tab
+Sign in using username 'admin' and password 'qzIRge'
+Open a command prompt in the same folder as 'flir_sdk.py'
+Run the command 'venv\Scripts\activate'
+Run the command below
+python flir_sdk.py --rtsp "rtsp://admin:qzIRge%40@192.168.1.2/avc/" --aim_mode base --ema 0.35 --morphk 3 --plume_low_offset 45 --kx 0.0018 --ky 0.0018 --dead 10 --canvas_w 1280 --canvas_h 720 --conn_dilate_iter 0 --display_interp nearest --rect_poll_hz 2 --proc_scale 0.4 --plume_every 3 --latency 50
+Note: the ip is not completely static, the last digit might change so double check the ip in your command and make sure it matcvhes
